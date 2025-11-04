@@ -1,3 +1,5 @@
+package MonotonicStack;
+
 import java.util.*;
 
 public class NextGreaterElement1 {
