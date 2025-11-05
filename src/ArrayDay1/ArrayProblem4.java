@@ -26,7 +26,7 @@ public class ArrayProblem4 {
        int m = arrB.length;
        int sum1 =0;
        int sum2 =0;
-       String s1 = "First array  is larger";
+       String s1 = "First array is larger";
        String s2 = "Second array is larger";
        String s3 = "Both are equal";
        for (int i =0;i<n;i++)
