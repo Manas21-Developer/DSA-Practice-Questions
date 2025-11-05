@@ -1,3 +1,4 @@
+package  ArrayDay1;
 import java.io.*;
 import java.util.*;
 
