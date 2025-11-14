@@ -2,7 +2,7 @@ package LinkedList;
 
 public class LinkedListCycle1 {
 
-      Definition for singly-linked list.
+      //Definition for singly-linked list.
       class ListNode {
           int val;
           ListNode next;
