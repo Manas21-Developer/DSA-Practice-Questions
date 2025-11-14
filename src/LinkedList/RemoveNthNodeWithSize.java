@@ -63,8 +63,9 @@ public class RemoveNthNodeWithSize {
         public Node removeNthFromEnd(Node head, int n) {
             if (head == null || n <= 0) return head;
 
-            Node temop = head;
-            while (temp != next)
-        }
+            Node temp = head;
+            while (temp != null){
+
+        }return head;
     }
 }
