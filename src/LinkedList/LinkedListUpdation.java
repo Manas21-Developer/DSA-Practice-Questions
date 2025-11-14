@@ -45,12 +45,35 @@ public class LinkedListUpdation {
         }
         Node slow = head;
         Node fast = head;
-        while(fast != null || fast.next != null)
+        while(fast != null && fast.next != null)
         {
             fast = fast.next.next;
             slow = slow.next;
         }
         slow.data = newData;
+    }
+    public Boolean  linkedListAtPos(int newData , int pos)
+    {
+        if (pos <0)
+        {
+            System.out.println("Position is invalid ");
+            return false ;
+        }
+        Node curr = head;
+        int i =0;
+        while (curr != null && i < pos)
+        {
+            curr = curr.next;
+            i++;
+        }
+        if (curr != null)
+        {
+            curr.data = newData;
+            return true;
+        }else
+        {
+            System.out.println("Position is out of bound"+pos);
+            return false;
         }
     }
 }
