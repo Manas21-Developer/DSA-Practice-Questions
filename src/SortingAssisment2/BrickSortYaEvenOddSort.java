@@ -20,6 +20,7 @@ public class BrickSortYaEvenOddSort {
 
             // even phase :- (0,2) (2,4)
             for (int i = 0 ; i<=n-2; i= i+2)
+
             {
                 if (arr[i] > arr[i+1]) {
                     swap(arr , i , i+1);
