@@ -6,52 +6,51 @@ import java.io.*;
 
 class Solution {
     static void mergeSort(int[] arr,int s,int e){
-        if (s >= e) return ;
-        int mid = s + (e-s)/2;
-        mergeSort(arr,s,mid);
+        if (s>=e) return;
+        int mid = s +(e-s)/2;
+
+        mergeSort(arr, s, mid);
         mergeSort(arr,mid+1,e);
 
-        merge(arr,s,mid ,e);
+        // merge the arr
+        merge(arr,s,mid,e);
     }
-    static void merge(int [] arr, int s,int mid, int e)
-    {
-        //int mid = s +(e-s) /2;
-
+    static void merge(int [] arr, int s,int mid, int e) {
         int len1 = mid-s+1;
         int len2 = e-mid;
 
-        int [] left = new int [len1];
+        int [] left = new int[len1];
         int [] right = new int [len2];
 
         int k = s;
-        for (int i = 0 ; i<len1 ; i++)
+        for (int i = 0 ;i<len1;i++)
         {
-            left[i] =arr[k++];
+            left[i] = arr[k++];
         }
 
-        //int k = mid+1;
-        for (int i = 0; i<len2;i++)
+        k = mid+1;
+        for(int i=0;i<len2;i++)
         {
             right[i] = arr[k++];
         }
 
-        //merge 2 sorted arr
-        int idx1 = 0; int idx2 =0;
+        int idx1 = 0 ; int idx2 = 0;
         k =s;
-        while (idx1 <len1 && idx2<len2)
+        while(idx1 < len1 && idx2 <len2)
         {
             if (left[idx1] <right[idx2])
             {
-                arr[k++] = left[idx1++];
-            }else
-            {
                 arr[k++] = right[idx2++];
+            }else {
+                arr[k++] = left[idx1++];
             }
         }
-        while (idx1 < len1)
+        // if arr1 having some ele
+        while (idx1 <len1)
         {
             arr[k++] = left[idx1++];
         }
+        //if arr2 having some ele
         while (idx2 < len2)
         {
             arr[k++] = right[idx2++];
