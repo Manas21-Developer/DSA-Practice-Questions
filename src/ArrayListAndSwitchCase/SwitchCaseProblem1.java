@@ -5,6 +5,7 @@ public class SwitchCaseProblem1 {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int print = 1;
+
         switch (print){
             case 1:
                 if(N == 55){
