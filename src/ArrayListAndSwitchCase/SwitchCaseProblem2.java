@@ -7,6 +7,7 @@ public class SwitchCaseProblem2 {
         int print =1;
 
         switch (print){
+
             case 1:
                 if (N == 12){
                     System.out.print("I am even");
