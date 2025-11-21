@@ -2,7 +2,8 @@ package BinarySearch2;
 
 public class PeakIndexInMontainArr {
     public int peakIndexInMountainArray(int[] A) {
-        int s = 0 ; int e = A.length-1;
+        int s = 0 ;
+        int e = A.length-1;
         while (s<=e)
         {
             int mid = s + (e-s)/2;
